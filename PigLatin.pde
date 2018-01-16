@@ -6,6 +6,12 @@ public void setup()
 	{
 	  System.out.println(pigLatin(lines[i]));
 	}
+
+	String[] hymn = loadStrings("LowellHymn.txt");
+	/*for(int i =0; i<hymn.length; i++)
+	{
+		System.out.println(pigLatin(hymn[i]));
+	}*/
 }
 public void draw()
 {
@@ -36,7 +42,7 @@ public String pigLatin(String sWord)
 		return sWord + "way";
 	}
 
-	if(sWord.substring(0,2).equals("qu")) //rule #3 needed
+	if(sWord.substring(0,2).equals("qu")) //rule #3 
 	{
 		return sWord.substring(2) + "quay";
 	}
